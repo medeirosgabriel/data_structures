@@ -57,19 +57,8 @@ public class HashtableOpenAddressQuadraticProbingImpl<T extends Storable>
 	@Override
 	public T search(T element) {
 		T ret = null;
-		if (!this.isEmpty()) {
-			int i = 0, key = 0;
-			boolean stop = false;
-			while (!stop && i < this.table.length) {
-				key = this.getKey(element, i);
-				if (this.table[key] == null) {
-					stop = true;
-				}else if (this.table[key].equals(element)) {
-					ret = element;
-					stop = true;
-				}
-				i++;
-			}
+		if (this.indexOf(element) != -1) {
+			ret = (T) this.table[this.indexOf(element)];
 		}
 		return ret;
 	}
