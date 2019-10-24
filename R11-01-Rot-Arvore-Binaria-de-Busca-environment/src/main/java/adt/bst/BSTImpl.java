@@ -23,13 +23,13 @@ public class BSTImpl<T extends Comparable<T>> implements BST<T> {
 
 	@Override
 	public int height() {
-		return heightNode(this.root);
+		return height(this.root);
 	}
 
-	private int heightNode(BTNode<T> node) {
+	private int height(BTNode<T> node) {
 		int height = -1;
 		if (!node.isEmpty()) {
-			height = 1 + Math.max(heightNode(node.getLeft()), heightNode(node.getRight()));
+			height = 1 + Math.max(height(node.getLeft()), height(node.getRight()));
 		}
 
 		return height;
@@ -39,20 +39,20 @@ public class BSTImpl<T extends Comparable<T>> implements BST<T> {
 	public BSTNode<T> search(T element) {
 		BSTNode<T> result = new BSTNode<>();
 		if (!this.isEmpty()) {
-			result = searchNode(this.root, element);
+			result = search(this.root, element);
 		}
 		return result;
 	}
 
-	private BSTNode<T> searchNode(BSTNode<T> node, T element) {
+	private BSTNode<T> search(BSTNode<T> node, T element) {
 		BSTNode<T> aux = new BSTNode<>();
 		if (!node.isEmpty()) {
 			if (node.getData().equals(element)) {
 				aux = node;
 			} else if (element.compareTo(node.getData()) < 0) {
-				aux = searchNode((BSTNode<T>) node.getLeft(), element);
+				aux = search((BSTNode<T>) node.getLeft(), element);
 			} else {
-				aux = searchNode((BSTNode<T>) node.getRight(), element);
+				aux = search((BSTNode<T>) node.getRight(), element);
 			}
 		}
 		return aux;
@@ -60,18 +60,18 @@ public class BSTImpl<T extends Comparable<T>> implements BST<T> {
 
 	@Override
 	public void insert(T element) {
-		insertNode(this.root, element);
+		insert(this.root, element);
 	}
 
-	private void insertNode(BTNode<T> node, T element) {
+	private void insert(BTNode<T> node, T element) {
 		if (node.isEmpty()) {
 			node.setData(element);
 			node.setLeft(new BSTNode.Builder<T>().data(null).left(null).right(null).parent(node).build());
 			node.setRight(new BSTNode.Builder<T>().data(null).left(null).right(null).parent(node).build());
 		} else if (element.compareTo(node.getData()) < 0) {
-			insertNode(node.getLeft(), element);
+			insert(node.getLeft(), element);
 		} else {
-			insertNode(node.getRight(), element);
+			insert(node.getRight(), element);
 		}
 	}
 
