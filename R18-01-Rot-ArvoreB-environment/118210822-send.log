@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-11-18T17:29:45.200-0300</date>
+  <logger>GABRIEL PAIVA MEDEIROS</logger>
+  <level>FINE</level>
+  <message>File 118210822-GABRIEL PAIVA MEDEIROS.zip was received. It was sent by GABRIEL PAIVA MEDEIROS from IP 150.165.42.140 at 18-11-2019 17*29*45</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-11-18T17:34:34.491-0300</date>
+  <logger>GABRIEL PAIVA MEDEIROS</logger>
+  <level>FINE</level>
+  <message>File 118210822-GABRIEL PAIVA MEDEIROS.zip was received. It was sent by GABRIEL PAIVA MEDEIROS from IP 150.165.42.140 at 18-11-2019 17*34*34</message>
+</record>
