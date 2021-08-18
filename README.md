@@ -1,3 +1,3 @@
 # Data Structures
-## Teacher: Adalberto Cajueiro & Claúdio Campelo
+## Teacher: Adalberto Cajueiro & Cláudio Campelo
 ## Period: 2019.2
