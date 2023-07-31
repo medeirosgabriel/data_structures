@@ -1,4 +1,7 @@
-# Data Structures & Algorithms
-## Teacher: Adalberto Cajueiro & Cláudio Campelo
-## Period: 2019.2
+# Data Structures & Algorithms - UFCG
+- ## Search Algorithms
+- ## Linked List
+- ## Tree
+- ## Hash Tables
+- ## ...
 
